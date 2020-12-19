@@ -1,0 +1,26 @@
+server:
+  port:  8888
+  #整合mybatis
+  #别名定义
+mybatis:
+  type-aliases-package: com.itgaoshu.bean
+   #加载mybatis全局配置文件/映射配置文件
+  mapper-locations: classpath:mapper:mapper:/*Mapper.xml
+  #配置数据源
+spring:
+  datasource:
+  #配置数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    #配置驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:  jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  thymeleaf:
+    encoding: utf-8
+    prefix:  classpath:/templates/
+    suffix: .html
+    mode: html5
+    servlet:
+      content-type: text/html
+
